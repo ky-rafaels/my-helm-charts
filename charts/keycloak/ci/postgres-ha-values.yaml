@@ -52,7 +52,7 @@ secrets:
   admin-creds:
     stringData:
       user: admin
-      password: secret
+      password: solo.io
 
 extraVolumeMounts: |
   - name: admin-creds
@@ -67,7 +67,7 @@ extraVolumes: |
 postgresql:
   enabled: true
   persistence:
-    enabled: true
+    enabled: false
 
 test:
-  enabled: true
+  enabled: false

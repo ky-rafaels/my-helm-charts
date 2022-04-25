@@ -36,22 +36,22 @@ postgresql:
 
 
 ingress:
-  enabled: true
-  annotations:
-    test-annotation1: annotationValue1
-    test-annotation2: annotationValue2
-  labels:
-    test-label1: labelValue1
-    test-label2: labelValue2
-  # List of rules for the Ingress
-  rules:
-    -
-      # Ingress host
-      host: '{{ .Release.Name }}.keycloak.example.com'
-      # Paths for the host
-      paths:
-        - path: /
-          pathType: Prefix
+  enabled: false
+  # annotations:
+  #   test-annotation1: annotationValue1
+  #   test-annotation2: annotationValue2
+  # labels:
+  #   test-label1: labelValue1
+  #   test-label2: labelValue2
+  # # List of rules for the Ingress
+  # rules:
+  #   -
+  #     # Ingress host
+  #     host: '{{ .Release.Name }}.keycloak.example.com'
+  #     # Paths for the host
+  #     paths:
+  #       - path: /
+  #         pathType: Prefix
   # TLS configuration
 
   console:
@@ -72,4 +72,4 @@ ingress:
             pathType: Prefix
 
 test:
-  enabled: true
+  enabled: false
